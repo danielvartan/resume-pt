@@ -1,0 +1,241 @@
+---
+title: "Currículo de Daniel Vartanian"
+author: Daniel Vartanian
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: false
+output:
+  pagedown::html_resume:
+    css: ["resume", "css/dd_cv.css", "css/custom.css"]
+    self_contained: true
+---
+
+<!-- See https://pagedown.rbind.io/#resume to learn more. -->
+
+```{r pkgs, echo = FALSE}
+library(magrittr)
+library(metathis)
+```
+
+```{r metathis, echo = FALSE, message = FALSE, warning = FALSE}
+meta() %>%
+  meta_name("github-repo" = "danielvartan/resume.pt") %>% 
+  meta_social(
+    title = "Currículo de Daniel Vartanian",
+    description = paste(
+      "Desenvolvido com os pacotes R {RMarkdown}, {pagedown} e {datadrivencv}."
+    ),
+    url = "https://danielvartan.github.io/resume.pt",
+    image = "https://danielvartan.github.io/resume.pt/img/share-card.png",
+    image_alt = "Currículo de Daniel Vartanian",
+    og_type = "website",
+    og_author = "Daniel Vartanian",
+    og_locale = "pt_BR",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@danielvartan"
+  )
+```
+
+<!-- styles: start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<!-- styles: end -->
+
+<!-- scripts: start -->
+<script src="https://kit.fontawesome.com/ddcb976bc4.js" crossorigin="anonymous"></script>
+<!-- scripts: end -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  results = "asis", 
+  echo = FALSE
+)
+```
+
+```{r, include = FALSE}
+source("./R/printing.R")
+
+data_location <- paste0(
+  "https://docs.google.com/spreadsheets/d/",
+  "1Dra9Otn3dxD7KcCD5xRVu7zZlXgWR3s3x3RPhQdwi7E"
+)
+
+# Read in all data and initialize a cv printer object
+cv <- create_cv_object(data_location = data_location)
+```
+
+# Aside
+
+<center>
+![Daniel Vartanian](https://avatars.githubusercontent.com/u/29462472?v=4){width=80% style='border-radius: 50%;'}
+</center>
+
+```{r}
+# You need to respect the sidebar width limit. If not, the script will
+# show just the sidebar in the first page.
+#
+# Example: 
+#
+# Something dsadasdasdasfdsadfasfasfsafsadsadsadasdsadsadas [BAD - too long]
+# 
+# Something dsadasdasdasfds adfasfasfsafsadsa dsadasdsadsadas [GOOD]
+
+if (isTRUE(params$pdf_mode)) {
+    cat(
+        "<br>",
+        "<center>",
+        "<p style='font-size: 0.7rem;'>",
+        "Veja este currículo online em: ",
+        "[danielvartan.github.io/resume.pt]", 
+        "(https://danielvartan.github.io/resume.pt)",
+        "</p>",
+        "</center>",
+        sep = ""
+    )
+} else {
+    cat(
+        "<br>",
+        "<center>",
+        "[<i class = 'fas fa-download'></i> Baixe este currículo]",
+        "(https://danielvartan.github.io/resume.pt/",
+        "pdf/Daniel%20Vartanian.pdf)",
+        "</center>",
+        sep = ""
+    )
+}
+```
+
+## Contato {#contact}
+
+<i class="fa fa-map-marker"></i>  São Paulo, SP, Brasil
+
+[<i class="fa fa-phone"></i> +55 11 95057-9817](https://wa.me/+5511950579817)
+
+[<i class="fa fa-envelope"></i> danvartan@gmail.com](mailto:danvartan@gmail.com)
+
+<i class="fa fa-share-alt" aria-hidden="true"></i> danielvartan (handle)
+
+[<i class="fa fa-home"></i>](https://danielvartan.com)
+[<i class="fa-brands fa-orcid"></i>](https://orcid.org/0000-0001-7782-759X)
+[<i class="ai ai-google-scholar"></i>](https://scholar.google.com/citations?user=EYp2CJ4AAAAJ&hl=pt-BR)
+[<i class="ai ai-researchgate"></i>](https://www.researchgate.net/profile/Daniel-Vartanian)
+[<i class="ai ai-publons"></i>](https://publons.com/researcher/2643522/daniel-vartanian)
+[<i class="ai ai-scopus"></i>](https://www.scopus.com/authid/detail.uri?authorId=57218159956)
+[<i class="ai ai-lattes"></i>](http://lattes.cnpq.br/3858825858568287)
+[<i class="ai ai-protocols"></i>](https://www.protocols.io/researchers/m4wle112u1u4yle1)
+[<i class="ai ai-zenodo"></i>](https://zenodo.org/communities/gipso)
+[<i class="ai ai-pubmed"></i>](https://pubmed.ncbi.nlm.nih.gov/?sort=pubdate&term=Vartanian+D&cauthor_id=32598502)
+[<i class="fa fa-github"></i>](https://github.com/danielvartan)
+[<i class="fa fa-twitter"></i>](https://twitter.com/danielvartan)
+[<i class="fa fa-linkedin"></i>](https://www.linkedin.com/in/danielvartan)
+
+## Habilidades de programação {#skills}
+
+<i class="fab fa-r-project"></i> `R` (Linguagem primária)
+
+<i class="fab fa-python"></i> `Python`
+
+<i class="fas fa-database"></i> `SQL`
+
+<i class="fas fa-code-branch"></i> `Git`
+
+<i class="fab fa-js"></i> `JavaScript`
+
+<i class="fab fa-html5"></i> `HTML`
+
+<i class="fab fa-css3-alt"></i> `CSS`
+
+## Disclaimer {#disclaimer}
+
+Desenvolvido com os pacotes R [__pagedown__](https://github.com/rstudio/pagedown) e [__datadrivencv__](https://github.com/nstrayer/datadrivencv). 
+
+Código disponível no [__GitHub__](https://github.com/danielvartan/resume.pt).
+
+Atualizado em `r format(Sys.Date(), "%d/%m/%Y")`.
+
+
+# Main
+
+## Daniel Vartanian {#title}
+
+<p style="font-size: 0.8rem;">Cientista de dados</p>
+
+## Emprego atual {#experiencias data-icon=suitcase}
+
+```{r}
+cv %<>% print_section("current_job")
+```
+
+## Educação {#educacao data-icon=graduation-cap data-concise=true}
+
+```{r}
+cv %<>% print_section("education")
+```
+
+## Filiações {#filiacoes data-icon=id-badge}
+
+```{r}
+cv %<>% print_section("memberships")
+```
+
+\pagebreak
+
+## Desenvolvimento de Software {#softwares data-icon=box-open}
+
+```{r}
+cv %<>% print_section("software_development")
+```
+
+## Principais publicações acadêmicas {#publicacoes data-icon=book}
+
+```{r}
+cv %<>% print_section("academic_articles")
+```
+
+::: {.aside style="top: 10px;"}
+
+<h2>Idiomas</h2>
+
+### Inglês
+
+<i class="fa-solid fa-ear-listen"></i> Compreensão: Fluente
+
+<i class="fas fa-book-reader"></i> Leitura: Fluente
+
+<i class="fa fa-comments-o" aria-hidden="true"></i> Fala: Avançado
+
+<i class="fas fa-pencil-alt" aria-hidden="true"></i> Escrita: Avançado
+
+(TOEFL ITP 2016: 593)
+
+### Espanhol
+
+<i class="fa-solid fa-ear-listen"></i> Compreensão: Fluente
+
+<i class="fas fa-book-reader"></i> Leitura: Fluente
+
+<i class="fa fa-comments-o" aria-hidden="true"></i> Fala: Intermediário
+
+<i class="fas fa-pencil-alt" aria-hidden="true"></i> Escrita: Intermediário
+
+<br>
+
+<h2>Outros interesses</h2>
+
+<p style="margin-block-start: 0em;">• Biologia sintética</p>
+
+• Biogerontologia
+
+• Business intelligence
+
+• Cronobiologia
+
+• Empreendedorismo
+
+• Engenharia biomédica
+
+• Marketing eleitoral
+
+• Inteligência artificial
+
+:::
