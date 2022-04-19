@@ -198,25 +198,25 @@ cv %<>% print_section("academic_articles")
 
 ### Inglês
 
-<i class="fa-solid fa-ear-listen"></i> Compreensão: Fluente
+<i class="fa-solid fa-ear-listen"></i> Fluente
 
-<i class="fas fa-book-reader"></i> Leitura: Fluente
+<i class="fas fa-book-reader"></i> Fluente
 
-<i class="fa fa-comments-o" aria-hidden="true"></i> Fala: Avançado
+<i class="fa fa-comments-o" aria-hidden="true"></i> vançado
 
-<i class="fas fa-pencil-alt" aria-hidden="true"></i> Escrita: Avançado
+<i class="fas fa-pencil-alt" aria-hidden="true"></i> Avançado
 
 (TOEFL ITP 2016: 593)
 
 ### Espanhol
 
-<i class="fa-solid fa-ear-listen"></i> Compreensão: Fluente
+<i class="fa-solid fa-ear-listen"></i> Fluente
 
-<i class="fas fa-book-reader"></i> Leitura: Fluente
+<i class="fas fa-book-reader"></i> Fluente
 
-<i class="fa fa-comments-o" aria-hidden="true"></i> Fala: Intermediário
+<i class="fa fa-comments-o" aria-hidden="true"></i> Intermediário
 
-<i class="fas fa-pencil-alt" aria-hidden="true"></i> Escrita: Intermediário
+<i class="fas fa-pencil-alt" aria-hidden="true"></i> Intermediário
 
 <br>
 
@@ -234,8 +234,8 @@ cv %<>% print_section("academic_articles")
 
 • Engenharia biomédica
 
-• Marketing eleitoral
-
 • Inteligência artificial
+
+• Marketing eleitoral
 
 :::
