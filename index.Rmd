@@ -202,7 +202,7 @@ cv %<>% print_section("academic_articles")
 
 <i class="fas fa-book-reader"></i> Fluente
 
-<i class="fa fa-comments-o" aria-hidden="true"></i> vançado
+<i class="fa fa-comments-o" aria-hidden="true"></i> Avançado
 
 <i class="fas fa-pencil-alt" aria-hidden="true"></i> Avançado
 
