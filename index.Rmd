@@ -238,4 +238,6 @@ cv %<>% print_section("academic_articles")
 
 • Marketing eleitoral
 
+• Marketing organizacional
+
 :::
