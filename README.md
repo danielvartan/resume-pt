@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# resume.pt
+# resume
 
 <!-- badges: start -->
 
@@ -9,8 +9,8 @@
 CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 <!-- badges: end -->
 
-This repository contains the source files used to build my Portuguese
-(PT-BR) resume/CV.
+This repository contains the source files used for building my
+Portuguese (pt-BR) resume/CV.
 
 Built with [`rmarkdown`](https://github.com/rstudio/rmarkdown),
 [`pagedown`](https://github.com/rstudio/pagedown), and

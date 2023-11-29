@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    line-height: 1.3;
-    color: #444;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #444;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #000;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
 }
 
 a {
-    color: #0063AD;
+  color: #0063AD;
 }
 
 @page {
-    size: A4 portrait;
-    margin: 21mm 10.5mm 21mm 10.5mm;
+  size: A4 portrait;
+  margin: 21mm 10.5mm 21mm 10.5mm;
 }
 
 @media screen and (min-width: 210mm) {
@@ -31,70 +31,74 @@ a {
 }
 
 * {
-    --pagedjs-margin-left: 5.25mm;
-    --pagedjs-margin-right: 10.5mm;
+  --pagedjs-margin-left: 5.25mm;
+  --pagedjs-margin-right: 10.5mm;
 }
 
 .pagedjs_page {
-    --pagedjs-pagebox-width: 210mm !important;
-    --pagedjs-pagebox-height: 297mm !important;
-    --pagedjs-margin-top: 21mm !important;
-    --pagedjs-margin-bottom: 21mm !important;
-    --pagedjs-margin-left: 5.25mm !important;
-    --pagedjs-margin-right: 10.5mm !important;
-    --sidebar-background-width: calc(1.5 * var(--pagedjs-margin-right) + var(--sidebar-width)) !important;
+  --pagedjs-pagebox-width: 210mm !important;
+  --pagedjs-pagebox-height: 297mm !important;
+  --pagedjs-margin-top: 21mm !important;
+  --pagedjs-margin-bottom: 21mm !important;
+  --pagedjs-margin-left: 5.25mm !important;
+  --pagedjs-margin-right: 10.5mm !important;
+  --sidebar-background-width: calc(1.5 * var(--pagedjs-margin-right) + var(--sidebar-width)) !important;
 }
 
 :root {
-    --page-width: 210mm;
-    --margin-left: 0mm;
-    --margin-right: 21mm;
-    --pagedjs-margin-top: 21mm;
-    --pagedjs-margin-bottom: var(--pagedjs-margin-top);
-    --pagedjs-margin-left: 5.25mm;
-    --pagedjs-margin-right: 10.5mm;
-    --sidebar-width: 12rem;
-    --sidebar-background-color: #FFF;
-    --sidebar-horizontal-padding: 0mm;
-    --decorator-border: 2px solid #fce7cb;
+  --page-width: 210mm;
+  --margin-left: 0mm;
+  --margin-right: 21mm;
+  --pagedjs-margin-top: 21mm;
+  --pagedjs-margin-bottom: var(--pagedjs-margin-top);
+  --pagedjs-margin-left: 5.25mm;
+  --pagedjs-margin-right: 10.5mm;
+  --sidebar-width: 12rem;
+  --sidebar-background-color: #FFF;
+  --sidebar-horizontal-padding: 0mm;
+  --decorator-border: 2px solid #fce7cb;
 }
 
 .decorator::after {
-    background-color: #524f4c;
+  background-color: #524f4c;
 }
 
 [data-id="main"] {
-    padding: 0 5.25mm 0 5.25mm;
+  padding: 0 5.25mm 0 5.25mm;
 }
 
 .aside {
-    width: var(--sidebar-width);
-    padding: 15.75mm var(--sidebar-horizontal-padding);
+  width: var(--sidebar-width);
+  padding: 1.2cm var(--sidebar-horizontal-padding);
 }
 
 .aside h2 {
-    position: static;
-    color: #555;
+  position: static;
+  color: #555;
 }
 
 .aside h2::after {
-    border-left: 0px;
+  border-left: 0px;
 }
 
 .aside h3 {
-    font-size: 0.8rem;
-    font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .aside i::before {
-    display: inline-block;
-    width: 1.25rem;
+  display: inline-block;
+  width: 1.25rem;
 }
 
 .fa-id-badge {
-    margin-left: 2px !important;
+  margin-left: 2px !important;
 }
 
 .fa-box-open {
-    margin-left: -2px !important;
+  margin-left: -2px !important;
+}
+
+.center-x {
+  text-align: center;
 }

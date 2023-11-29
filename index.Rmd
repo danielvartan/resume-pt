@@ -13,27 +13,25 @@ output:
 
 <!-- See https://pagedown.rbind.io/#resume to learn more. -->
 
-```{r pkgs, echo = FALSE}
-library(magrittr)
-library(metathis)
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  results = "asis", 
+  echo = FALSE
+)
 ```
 
 ```{r metathis, echo = FALSE, message = FALSE, warning = FALSE}
-meta() %>%
-  meta_name("github-repo" = "danielvartan/resume.pt") %>% 
-  meta_social(
+metathis::meta() |>
+  metathis::meta_name("github-repo" = "danielvartan/resume") |>
+  metathis::meta_social(
     title = "Currículo de Daniel Vartanian",
     description = paste(
       "Desenvolvido com os pacotes R {RMarkdown}, {pagedown} e {datadrivencv}."
     ),
-    url = "https://danielvartan.github.io/resume.pt",
-    image = "https://danielvartan.github.io/resume.pt/img/share-card.png",
-    image_alt = "Currículo de Daniel Vartanian",
+    url = "https://danielvartan.github.io/resume",
     og_type = "website",
     og_author = "Daniel Vartanian",
-    og_locale = "pt_BR",
-    twitter_card_type = "summary_large_image",
-    twitter_creator = "@danielvartan"
+    og_locale = "pt_BR"
   )
 ```
 
@@ -46,88 +44,65 @@ meta() %>%
 <!-- scripts: end -->
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(
-  results = "asis", 
-  echo = FALSE
-)
-```
-
-```{r, include = FALSE}
-source("./R/printing.R")
+source(here::here("R", "printing.R"))
 
 data_location <- paste0(
   "https://docs.google.com/spreadsheets/d/",
   "1Dra9Otn3dxD7KcCD5xRVu7zZlXgWR3s3x3RPhQdwi7E"
 )
 
-# Read in all data and initialize a cv printer object
-cv <- create_cv_object(data_location = data_location)
+# Read all data and initialize a cv printer object
+cv <- data_location  |> create_cv_object()
 ```
 
 # Aside
 
-<center>
-![Daniel Vartanian](https://avatars.githubusercontent.com/u/29462472?v=4){width=80% style='border-radius: 50%;'}
-</center>
+![Daniel Vartanian](https://avatars.githubusercontent.com/u/29462472?v=4){width=100% style='border-radius: 50%; text-align: center;'}
 
 ```{r}
-# You need to respect the sidebar width limit. If not, the script will
-# show just the sidebar in the first page.
-#
-# Example: 
-#
-# Something dsadasdasdasfdsadfasfasfsafsadsadsadasdsadsadas [BAD - too long]
-# 
-# Something dsadasdasdasfds adfasfasfsafsadsa dsadasdsadsadas [GOOD]
-
 if (isTRUE(params$pdf_mode)) {
-    cat(
-        "<br>",
-        "<center>",
-        "<p style='font-size: 0.7rem;'>",
-        "Veja este currículo online em: ",
-        "[danielvartan.github.io/resume.pt]", 
-        "(https://danielvartan.github.io/resume.pt)",
-        "</p>",
-        "</center>",
-        sep = ""
-    )
+  cat(
+    "<p style='font-size: 0.7rem; text-align: center;'>",
+    "Veja este currículo online em: ",
+    "[danielvartan.github.io/resume]", 
+    "(https://danielvartan.github.io/resume)",
+    "</p>",
+    sep = ""
+  )
 } else {
-    cat(
-        "<br>",
-        "<center>",
-        "[<i class = 'fas fa-download'></i> Baixe este currículo]",
-        "(https://danielvartan.github.io/resume.pt/",
-        "pdf/Daniel%20Vartanian.pdf)",
-        "</center>",
-        sep = ""
-    )
+  cat(
+    "<p style='text-align: center;'>",
+    "[<i class = 'fas fa-download'></i> Baixe este currículo]",
+    "(pdf/Daniel%20Vartanian.pdf)",
+    "</p>",
+    sep = ""
+  )
 }
 ```
 
+::: {style="text-align: left;"}
 ## Contato {#contact}
 
 <i class="fa fa-map-marker"></i>  São Paulo, SP, Brasil
 
-[<i class="fa fa-phone"></i> +55 11 95057-9817](https://wa.me/+5511950579817)
+[<i class="fa-solid fa-phone"></i> +55 11 95057-9817](https://wa.me/+5511950579817)
 
-[<i class="fa fa-envelope"></i> danvartan@gmail.com](mailto:danvartan@gmail.com)
+[<i class="fa-solid fa-envelope"></i> danvartan@gmail.com](mailto:danvartan@gmail.com)
 
 <i class="fa fa-share-alt" aria-hidden="true"></i> danielvartan (handle)
 
-[<i class="fa fa-home"></i>](https://danielvartan.com)
+[<i class="fa-solid fa-house"></i>](https://linktr.ee/danielvartan)
+[<i class="fa-brands fa-github"></i>](https://github.com/danielvartan)
 [<i class="fa-brands fa-orcid"></i>](https://orcid.org/0000-0001-7782-759X)
 [<i class="ai ai-google-scholar"></i>](https://scholar.google.com/citations?user=EYp2CJ4AAAAJ&hl=pt-BR)
 [<i class="ai ai-researchgate"></i>](https://www.researchgate.net/profile/Daniel-Vartanian)
-[<i class="ai ai-publons"></i>](https://publons.com/researcher/2643522/daniel-vartanian)
-[<i class="ai ai-scopus"></i>](https://www.scopus.com/authid/detail.uri?authorId=57218159956)
+[<i class="ai ai-pubmed"></i>](https://pubmed.ncbi.nlm.nih.gov/?sort=pubdate&term=Vartanian+D&cauthor_id=32598502)
 [<i class="ai ai-lattes"></i>](http://lattes.cnpq.br/3858825858568287)
 [<i class="ai ai-protocols"></i>](https://www.protocols.io/researchers/m4wle112u1u4yle1)
-[<i class="ai ai-zenodo"></i>](https://zenodo.org/communities/gipso)
-[<i class="ai ai-pubmed"></i>](https://pubmed.ncbi.nlm.nih.gov/?sort=pubdate&term=Vartanian+D&cauthor_id=32598502)
-[<i class="fa fa-github"></i>](https://github.com/danielvartan)
-[<i class="fa fa-twitter"></i>](https://twitter.com/danielvartan)
-[<i class="fa fa-linkedin"></i>](https://www.linkedin.com/in/danielvartan)
+
+[<i class="fa-brands fa-instagram"></i>](https://www.instagram.com/danielvartan)
+[<i class="fa-brands fa-threads"></i>](https://www.threads.net/@danielvartan)
+[<i class="fa-brands fa-linkedin-in"></i>](https://www.linkedin.com/in/danielvartan)
 
 ## Habilidades de programação {#skills}
 
@@ -144,12 +119,13 @@ if (isTRUE(params$pdf_mode)) {
 <i class="fab fa-html5"></i> `HTML`
 
 <i class="fab fa-css3-alt"></i> `CSS`
+:::
 
 ## Disclaimer {#disclaimer}
 
 Desenvolvido com os pacotes R [__pagedown__](https://github.com/rstudio/pagedown) e [__datadrivencv__](https://github.com/nstrayer/datadrivencv). 
 
-Código disponível no [__GitHub__](https://github.com/danielvartan/resume.pt).
+Código disponível no [__GitHub__](https://github.com/danielvartan/resume).
 
 Atualizado em `r format(Sys.Date(), "%d/%m/%Y")`.
 
@@ -158,24 +134,24 @@ Atualizado em `r format(Sys.Date(), "%d/%m/%Y")`.
 
 ## Daniel Vartanian {#title}
 
-<p style="font-size: 0.8rem;">Cientista de dados</p>
+<p style="font-size: 0.8rem;">Acadêmico e Cientista de dados</p>
 
-## Emprego atual {#experiencias data-icon=suitcase}
+## Experiência profissional {#experiencias data-icon=suitcase}
 
 ```{r}
-cv %<>% print_section("current_job")
+cv <- cv |> print_section("experience")
 ```
 
 ## Educação {#educacao data-icon=graduation-cap data-concise=true}
 
 ```{r}
-cv %<>% print_section("education")
+cv <- cv |> print_section("education")
 ```
 
 ## Filiações {#filiacoes data-icon=id-badge}
 
 ```{r}
-cv %<>% print_section("memberships")
+cv <- cv |> print_section("memberships")
 ```
 
 \pagebreak
@@ -183,17 +159,16 @@ cv %<>% print_section("memberships")
 ## Desenvolvimento de Software {#softwares data-icon=box-open}
 
 ```{r}
-cv %<>% print_section("software_development")
+cv <- cv |> print_section("software_development")
 ```
 
 ## Principais publicações acadêmicas {#publicacoes data-icon=book}
 
 ```{r}
-cv %<>% print_section("academic_articles")
+cv <- cv |> print_section("academic_articles")
 ```
 
 ::: {.aside style="top: 10px;"}
-
 <h2>Idiomas</h2>
 
 ### Inglês
@@ -202,11 +177,9 @@ cv %<>% print_section("academic_articles")
 
 <i class="fas fa-book-reader"></i> Fluente
 
-<i class="fa fa-comments-o" aria-hidden="true"></i> Avançado
+<i class="fa fa-comments-o" aria-hidden="true"></i> Fluente
 
-<i class="fas fa-pencil-alt" aria-hidden="true"></i> Avançado
-
-(TOEFL ITP 2016: 593)
+<i class="fas fa-pencil-alt" aria-hidden="true"></i> Fluente
 
 ### Espanhol
 
@@ -222,22 +195,27 @@ cv %<>% print_section("academic_articles")
 
 <h2>Outros interesses</h2>
 
-<p style="margin-block-start: 0em;">• Biologia sintética</p>
+<p style="margin-block-start: 0em;">• [Biogerontologia](https://en.wikipedia.org/wiki/Biogerontology)</p>
 
-• Biogerontologia
+• [Biologia de sistemas](https://pt.wikipedia.org/wiki/Biologia_sistêmica)
 
-• Business intelligence
+• [Biologia sintética](https://pt.wikipedia.org/wiki/Biologia_sintética)
 
-• Cronobiologia
+• [Biomatemática](https://pt.wikipedia.org/wiki/Biologia_teórica)
 
-• Empreendedorismo
+• [Business intelligence](https://pt.wikipedia.org/wiki/Inteligência_empresarial)
 
-• Engenharia biomédica
+• [Cronobiologia](https://pt.wikipedia.org/wiki/Cronobiologia)
 
-• Inteligência artificial
+• [Ecologia](https://pt.wikipedia.org/wiki/Ecologia)
 
-• Marketing eleitoral
+• [Inteligência artificial](https://pt.wikipedia.org/wiki/Inteligência_artificial)
 
 • Marketing organizacional
 
+• Marketing político-eleitoral
+
+• [Neurociência computacional](https://pt.wikipedia.org/wiki/Neurociência_computacional)
+
+• __Science-based business__
 :::
