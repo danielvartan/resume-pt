@@ -104,7 +104,7 @@ if (isTRUE(params$pdf_mode)) {
 [<i class="fa-brands fa-threads"></i>](https://www.threads.net/@danielvartan)
 [<i class="fa-brands fa-linkedin-in"></i>](https://www.linkedin.com/in/danielvartan)
 
-## Habilidades de programação {#skills}
+## Habilidades em programação {#skills}
 
 <i class="fab fa-r-project"></i> `R` (Linguagem primária)
 
