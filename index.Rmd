@@ -134,7 +134,7 @@ Atualizado em `r format(Sys.Date(), "%d/%m/%Y")`.
 
 ## Daniel Vartanian {#title}
 
-<p style="font-size: 0.8rem;">Acadêmico e Cientista de dados</p>
+<!-- <p style="font-size: 0.8rem;">Acadêmico e Cientista de dados</p> -->
 
 ## Experiência profissional {#experiencias data-icon=suitcase}
 
@@ -195,19 +195,9 @@ cv <- cv |> print_section("academic_articles")
 
 <h2>Outros interesses</h2>
 
-<p style="margin-block-start: 0em;">• [Biogerontologia](https://en.wikipedia.org/wiki/Biogerontology)</p>
-
-• [Biologia de sistemas](https://pt.wikipedia.org/wiki/Biologia_sistêmica)
-
-• [Biologia sintética](https://pt.wikipedia.org/wiki/Biologia_sintética)
-
-• [Biomatemática](https://pt.wikipedia.org/wiki/Biologia_teórica)
+<p style="margin-block-start: 0em;">• [Bioinformática](https://pt.wikipedia.org/wiki/Bioinformática)</p>
 
 • [Business intelligence](https://pt.wikipedia.org/wiki/Inteligência_empresarial)
-
-• [Cronobiologia](https://pt.wikipedia.org/wiki/Cronobiologia)
-
-• [Ecologia](https://pt.wikipedia.org/wiki/Ecologia)
 
 • [Inteligência artificial](https://pt.wikipedia.org/wiki/Inteligência_artificial)
 
@@ -217,5 +207,7 @@ cv <- cv |> print_section("academic_articles")
 
 • [Neurociência computacional](https://pt.wikipedia.org/wiki/Neurociência_computacional)
 
-• __Science-based business__
+• [Science-to-business marketing](https://en.wikipedia.org/wiki/Science-to-business_marketing)
+
+• [Sistemas complexos](https://pt.wikipedia.org/wiki/Sistemas_complexos)
 :::
