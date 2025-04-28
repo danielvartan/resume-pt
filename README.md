@@ -7,9 +7,7 @@
 
 ## Overview
 
-This repository contains the source files used for creating my resume/CV (pt-BR).
-
-Built with [`rmarkdown`](https://github.com/rstudio/rmarkdown), [`pagedown`](https://github.com/rstudio/pagedown), and [`datadrivencv`](https://github.com/nstrayer/datadrivencv).
+This repository contains the source files used for creating my résumé (pt-BR). It was built with R and the R packages [`rmarkdown`](https://github.com/rstudio/rmarkdown), [`pagedown`](https://github.com/rstudio/pagedown), and [`datadrivencv`](https://github.com/nstrayer/datadrivencv).
 
 ## License
 
