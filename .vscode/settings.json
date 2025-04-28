@@ -18,5 +18,24 @@
     "titleBar.inactiveBackground": "#ffffff99",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#FFFFFF"
+  "peacock.color": "#FFFFFF",
+  "cSpell.words": [
+    "asis",
+    "beepr",
+    "Currículo",
+    "danielvartan",
+    "datadrivencv",
+    "Desenvolvido",
+    "dplyr",
+    "googlesheets",
+    "knitr",
+    "metathis",
+    "pacotes",
+    "pagedjs",
+    "purrr",
+    "rmarkdown",
+    "stylesheet",
+    "tidyr",
+    "Vartanian"
+  ]
 }

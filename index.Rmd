@@ -13,14 +13,29 @@ output:
 
 <!-- See <https://pagedown.rbind.io/#resume> to learn more. -->
 
-```{r, include = FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(
   results = "asis",
   echo = FALSE
 )
 ```
 
-```{r, include = FALSE}
+```{r, eval=FALSE, include=FALSE}
+library(beepr)
+library(checkmate)
+library(datadrivencv)
+library(dplyr)
+library(glue)
+library(googlesheets4)
+library(here)
+library(metathis)
+library(pagedown)
+library(purrr)
+library(rmarkdown)
+library(tidyr)
+```
+
+```{r, include=FALSE}
 source(here::here("R", "printing.R"))
 ```
 
