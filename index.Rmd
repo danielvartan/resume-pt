@@ -11,24 +11,28 @@ output:
     self_contained: true
 ---
 
-<!-- See https://pagedown.rbind.io/#resume to learn more. -->
+<!-- See <https://pagedown.rbind.io/#resume> to learn more. -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  results = "asis", 
+  results = "asis",
   echo = FALSE
 )
 ```
 
+```{r, include = FALSE}
+source(here::here("R", "printing.R"))
+```
+
 ```{r metathis, echo = FALSE, message = FALSE, warning = FALSE}
 metathis::meta() |>
-  metathis::meta_name("github-repo" = "danielvartan/resume") |>
+  metathis::meta_name("github-repo" = "danielvartan/resume-pt") |>
   metathis::meta_social(
     title = "Currículo de Daniel Vartanian",
     description = paste(
       "Desenvolvido com os pacotes R {RMarkdown}, {pagedown} e {datadrivencv}."
     ),
-    url = "https://danielvartan.github.io/resume",
+    url = "https://danielvartan.github.io/resume-pt",
     og_type = "website",
     og_author = "Daniel Vartanian",
     og_locale = "pt_BR"
@@ -44,8 +48,6 @@ metathis::meta() |>
 <!-- scripts: end -->
 
 ```{r, include = FALSE}
-source(here::here("R", "printing.R"))
-
 data_location <- paste0(
   "https://docs.google.com/spreadsheets/d/",
   "1Dra9Otn3dxD7KcCD5xRVu7zZlXgWR3s3x3RPhQdwi7E"
@@ -64,8 +66,8 @@ if (isTRUE(params$pdf_mode)) {
   cat(
     "<p style='font-size: 0.7rem; text-align: center;'>",
     "Veja este currículo online em: ",
-    "[danielvartan.github.io/resume]", 
-    "(https://danielvartan.github.io/resume)",
+    "[danielvartan.github.io/resume-pt]",
+    "(https://danielvartan.github.io/resume-pt)",
     "</p>",
     sep = ""
   )
@@ -80,52 +82,49 @@ if (isTRUE(params$pdf_mode)) {
 }
 ```
 
-::: {style="text-align: left;"}
-## Contato {#contact}
+::: {style="text-align: left; padding-top:10px;"}
+<p style="font-size: 0.7rem;">Para mais informações, consulte meu currículo no [LinkedIn](https://www.linkedin.com/in/danielvartan).</p>
+:::
+
+::: {style="text-align: left; padding-top:20px;"}
+<h2>Contato</h2>
 
 <i class="fa fa-map-marker"></i>  São Paulo, SP, Brasil
 
-[<i class="fa-solid fa-phone"></i> +55 11 95057-9817](https://wa.me/+5511950579817)
+<i class="fa-solid fa-phone"></i> [+55 11 95057-9817](https://wa.me/+5511950579817)
 
-[<i class="fa-solid fa-envelope"></i> danvartan@gmail.com](mailto:danvartan@gmail.com)
+<i class="fa-solid fa-envelope"></i> [danvartan@gmail.com](mailto:danvartan@gmail.com)
 
-<i class="fa fa-share-alt" aria-hidden="true"></i> danielvartan (handle)
+<i class="fa-brands fa-github"></i> [danielvartan](https://github.com/danielvartan)
 
-[<i class="fa-solid fa-house"></i>](https://linktr.ee/danielvartan)
-[<i class="fa-brands fa-github"></i>](https://github.com/danielvartan)
-[<i class="fa-brands fa-orcid"></i>](https://orcid.org/0000-0001-7782-759X)
-[<i class="ai ai-google-scholar"></i>](https://scholar.google.com/citations?user=EYp2CJ4AAAAJ&hl=pt-BR)
-[<i class="ai ai-researchgate"></i>](https://www.researchgate.net/profile/Daniel-Vartanian)
-[<i class="ai ai-pubmed"></i>](https://pubmed.ncbi.nlm.nih.gov/?sort=pubdate&term=Vartanian+D&cauthor_id=32598502)
-[<i class="ai ai-lattes"></i>](http://lattes.cnpq.br/3858825858568287)
-[<i class="ai ai-protocols"></i>](https://www.protocols.io/researchers/m4wle112u1u4yle1)
+<i class="fa-brands fa-linkedin-in"></i> [danielvartan](https://www.linkedin.com/in/danielvartan)
 
-[<i class="fa-brands fa-instagram"></i>](https://www.instagram.com/danielvartan)
-[<i class="fa-brands fa-threads"></i>](https://www.threads.net/@danielvartan)
-[<i class="fa-brands fa-linkedin-in"></i>](https://www.linkedin.com/in/danielvartan)
+<i class="fa-brands fa-orcid"></i> [0000-0001-7782-759X](https://orcid.org/0000-0001-7782-759X)
+:::
 
-## Habilidades em programação {#skills}
+::: {style="text-align: left; padding-top:20px;"}
+<h2>Linguagens de Programação</h2>
 
-<i class="fab fa-r-project"></i> `R` (Linguagem primária)
+<i class="fab fa-r-project"></i> `R` (Primária)
 
 <i class="fab fa-python"></i> `Python`
 
 <i class="fas fa-database"></i> `SQL`
-
-<i class="fas fa-code-branch"></i> `Git`
 
 <i class="fab fa-js"></i> `JavaScript`
 
 <i class="fab fa-html5"></i> `HTML`
 
 <i class="fab fa-css3-alt"></i> `CSS`
+
+<i class="fas fa-code-branch"></i> `Git`
 :::
 
 ## Disclaimer {#disclaimer}
 
-Desenvolvido com os pacotes R [__pagedown__](https://github.com/rstudio/pagedown) e [__datadrivencv__](https://github.com/nstrayer/datadrivencv). 
+Desenvolvido com os pacotes R [__pagedown__](https://github.com/rstudio/pagedown) e [__datadrivencv__](https://github.com/nstrayer/datadrivencv).
 
-Código disponível no [__GitHub__](https://github.com/danielvartan/resume).
+Código disponível no [__GitHub__](https://github.com/danielvartan/resume-pt).
 
 Atualizado em `r format(Sys.Date(), "%d/%m/%Y")`.
 
@@ -134,9 +133,9 @@ Atualizado em `r format(Sys.Date(), "%d/%m/%Y")`.
 
 ## Daniel Vartanian {#title}
 
-<!-- <p style="font-size: 0.8rem;">Acadêmico e Cientista de dados</p> -->
+<p style="font-size: 0.8rem;">Cientista da Complexidade e Cientista de Dados
 
-## Experiência profissional {#experiencias data-icon=suitcase}
+## Experiência Profissional {#experiencias data-icon=suitcase}
 
 ```{r}
 cv <- cv |> print_section("experience")
@@ -154,24 +153,10 @@ cv <- cv |> print_section("education")
 cv <- cv |> print_section("memberships")
 ```
 
-\pagebreak
-
-## Desenvolvimento de Software {#softwares data-icon=box-open}
-
-```{r}
-cv <- cv |> print_section("software_development")
-```
-
-## Principais publicações acadêmicas {#publicacoes data-icon=book}
-
-```{r}
-cv <- cv |> print_section("academic_articles")
-```
-
 ::: {.aside style="top: 10px;"}
 <h2>Idiomas</h2>
 
-### Inglês
+<h3>Inglês</h3>
 
 <i class="fa-solid fa-ear-listen"></i> Fluente
 
@@ -181,7 +166,7 @@ cv <- cv |> print_section("academic_articles")
 
 <i class="fas fa-pencil-alt" aria-hidden="true"></i> Fluente
 
-### Espanhol
+<h3>Espanhol</h3>
 
 <i class="fa-solid fa-ear-listen"></i> Fluente
 
@@ -191,23 +176,107 @@ cv <- cv |> print_section("academic_articles")
 
 <i class="fas fa-pencil-alt" aria-hidden="true"></i> Intermediário
 
+<h3>Francês</h3>
+
+<i class="fa-solid fa-ear-listen"></i> Básico
+
+<i class="fas fa-book-reader"></i> Básico
+
+<i class="fa fa-comments-o" aria-hidden="true"></i> Básico
+
+<i class="fas fa-pencil-alt" aria-hidden="true"></i> Básico
+
 <br>
 
-<h2>Outros interesses</h2>
+<h2>Habilidades</h2>
 
-<p style="margin-block-start: 0em;">• [Bioinformática](https://pt.wikipedia.org/wiki/Bioinformática)</p>
+<p style="margin-block-start: 0em;">• Modelagem estatística</p>
 
-• [Business intelligence](https://pt.wikipedia.org/wiki/Inteligência_empresarial)
+<p style="margin-block-start: 0em;">• Aprendizado de Máquina</p>
 
-• [Inteligência artificial](https://pt.wikipedia.org/wiki/Inteligência_artificial)
+<p style="margin-block-start: 0em;">• Modelagem de sistemas complexos</p>
 
-• Marketing organizacional
+<p style="margin-block-start: 0em;">• Modelagem baseada em agentes</p>
 
-• Marketing político-eleitoral
+<p style="margin-block-start: 0em;">• Modelagem de sistemas dinâmicos</p>
 
-• [Neurociência computacional](https://pt.wikipedia.org/wiki/Neurociência_computacional)
+<p style="margin-block-start: 0em;">• Modelagem de redes complexas</p>
 
-• [Science-to-business marketing](https://en.wikipedia.org/wiki/Science-to-business_marketing)
+<p style="margin-block-start: 0em;">• Análise de dados temporais</p>
 
-• [Sistemas complexos](https://pt.wikipedia.org/wiki/Sistemas_complexos)
+<p style="margin-block-start: 0em;">• Análise de dados espaciais</p>
+
+<p style="margin-block-start: 0em;">• Desenvolvimento de software</p>
+
+<p style="margin-block-start: 0em;">• Engenharia de dados</p>
+
+<p style="margin-block-start: 0em;">• Visualização de dados</p>
+
+<p style="margin-block-start: 0em;">• Dashboards (R [Shiny](https://shiny.posit.co/))</p>
+
+<p style="margin-block-start: 0em;">• Redação técnica/acadêmica</p>
+
+<p style="margin-block-start: 0em;">• Design gráfico</p>
+:::
+
+\pagebreak
+
+## Projetos {#softwares data-icon=box-open}
+
+```{r}
+cv <- cv |> print_section("software_development")
+```
+
+## Principais Publicações Acadêmicas {#publicacoes data-icon=book}
+
+```{r}
+cv <- cv |> print_section("academic_articles")
+```
+
+::: {.aside style="top: 10px;"}
+<h2>Organizações</h2>
+
+<h3>[An Introduction to the R Programming Language](https://danielvartan.github.io/r-course)</h3>
+
+<p>Faculdade de Saúde Pública da Universidade de São Paulo (2025)</p>
+
+<h3>[Agent-Based Modeling Study Group](https://trello.com/b/mzqEtRdm/agent-based-modeling-study-group)</h3>
+
+<p>Universidade de São Paulo (2024)</p>
+
+<h3>[Curso Introdutório de Actigrafia](https://web.archive.org/web/20211026202625/https://www.sono2021.com.br/evento/sono2021/programacao/gradeatividades)</h3>
+
+<p>XVIII Congresso Brasileiro de Sono (2021)</p>
+
+<h3>[Durma na EACH](https://photos.app.goo.gl/spUsAgPNhdnEXQja8)</h3>
+
+<p>Escola de Artes, Ciências e Humanidades da Universidade de São Paulo (2017)</p>
+
+<br>
+
+<h2>Cursos</h2>
+
+<h3>[Introduction to Agent-Based Modeling](https://abm.complexityexplorer.org/)</h3>
+
+<p>Santa Fe Institute (2024, Complexity Explorer)</p>
+
+<h3>[São Paulo School of Advanced Science on Ecology of Human Sleep and Biological Rhythms](https://espca.fapesp.br/escola/sao_paulo_school_of_advanced_science_on_ecology_of_human_sleep_and_biological_rhythms/101/)</h3>
+
+<p>Universidade de São Paulo (2022)</p>
+
+<h3>[Circadian Clocks: How Rhythms Structure Life](https://www.coursera.org/learn/circadian-clocks)</h3>
+
+<p>Ludwig-Maximilians-Universität München (2022, Coursera)</p>
+
+<h3>[R Programming](https://www.coursera.org/learn/r-programming)</h3>
+
+<p>John Hopkins University (2020, Coursera)</p>
+
+<h3>[Acesso e Uso da Informação Técnico-Científica](https://uspdigital.usp.br/apolo/apoObterCurso?cod_curso=860400060&cod_edicao=12001&id_periodo=&id_modalidade=4)</h3>
+
+<p>Universidade de São Paulo (2013)</p>
+
+<h3>Arte e Técnica da Escrita Acadêmica</h3>
+
+<p>Universidade de São Paulo (2013)</p>
 :::
