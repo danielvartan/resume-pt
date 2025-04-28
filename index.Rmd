@@ -148,7 +148,7 @@ Atualizado em `r format(Sys.Date(), "%d/%m/%Y")`.
 
 ## Daniel Vartanian {#title}
 
-<p style="font-size: 0.8rem;">Cientista da Complexidade e Cientista de Dados
+<p style="font-size: 1rem;">Cientista da Complexidade e Cientista de Dados<p>
 
 ## Experiência Profissional {#experiencias data-icon=suitcase}
 
@@ -265,7 +265,7 @@ cv <- cv |> print_section("academic_articles")
 
 <h3>[Durma na EACH](https://photos.app.goo.gl/spUsAgPNhdnEXQja8)</h3>
 
-<p>Escola de Artes, Ciências e Humanidades da Universidade de São Paulo (2017)</p>
+<p>Projeto de bem-estar focado na criação de espaços para dormir para estudantes, desenvolvido na Escola de Artes, Ciências e Humanidades, Universidade de São Paulo (2017)</p>
 
 <br>
 
@@ -285,13 +285,9 @@ cv <- cv |> print_section("academic_articles")
 
 <h3>[R Programming](https://www.coursera.org/learn/r-programming)</h3>
 
-<p>John Hopkins University (2020, Coursera)</p>
+<p>Johns Hopkins University (2020, Coursera)</p>
 
 <h3>[Acesso e Uso da Informação Técnico-Científica](https://uspdigital.usp.br/apolo/apoObterCurso?cod_curso=860400060&cod_edicao=12001&id_periodo=&id_modalidade=4)</h3>
-
-<p>Universidade de São Paulo (2013)</p>
-
-<h3>Arte e Técnica da Escrita Acadêmica</h3>
 
 <p>Universidade de São Paulo (2013)</p>
 :::
